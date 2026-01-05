@@ -62,7 +62,7 @@ export function useLogout() {
   const clearUser = useAuthStore((state) => state.clearUser);
 
   return useMutation({
-    mutationFn: () => apiClient.post<AuthResponse>("/users/logout"),
+    mutationFn: () => apiClient.post<AuthResponse>("/users/logout", {}),
     onSuccess: async () => {
       clearUser();
       await queryClient.clear();
