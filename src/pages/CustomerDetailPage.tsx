@@ -214,7 +214,7 @@ export default function CustomerDetailPage() {
                 {t("customers.totalDebt")}
               </p>
               <p className="text-base font-medium text-gray-900 dark:text-white">
-                ${customer.totalDebt.toFixed(2)}
+                ${Number(customer.totalDebt).toFixed(2)}
               </p>
             </div>
             <div>
@@ -222,7 +222,7 @@ export default function CustomerDetailPage() {
                 {t("customers.installmentAmount")}
               </p>
               <p className="text-base font-medium text-gray-900 dark:text-white">
-                ${customer.installmentAmount.toFixed(2)}
+                ${Number(customer.installmentAmount).toFixed(2)}
               </p>
             </div>
             <div>
@@ -258,7 +258,7 @@ export default function CustomerDetailPage() {
                 {t("customers.totalPaid")}
               </p>
               <p className="text-2xl font-bold text-success-600 dark:text-success-400">
-                ${totalPaid.toFixed(2)}
+                ${Number(totalPaid).toFixed(2)}
               </p>
             </div>
             <div>
@@ -266,7 +266,7 @@ export default function CustomerDetailPage() {
                 {t("customers.remaining")}
               </p>
               <p className="text-2xl font-bold text-danger-600 dark:text-danger-400">
-                ${remainingDebt.toFixed(2)}
+                ${Number(remainingDebt).toFixed(2)}
               </p>
             </div>
           </div>
@@ -352,7 +352,7 @@ export default function CustomerDetailPage() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="text-sm font-semibold text-success-600 dark:text-success-400">
-                        ${payment.amountPaid.toFixed(2)}
+                        ${Number(payment.amountPaid).toFixed(2)}
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">

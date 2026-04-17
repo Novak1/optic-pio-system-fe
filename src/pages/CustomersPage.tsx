@@ -255,10 +255,10 @@ export default function CustomersPage() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="text-sm text-gray-900 dark:text-white">
-                        {t("customers.total")}: ${customer.totalDebt.toFixed(2)}
+                        {t("customers.total")}: ${Number(customer.totalDebt).toFixed(2)}
                       </div>
                       <div className="text-sm text-gray-500 dark:text-gray-400">
-                        ${customer.installmentAmount.toFixed(2)} ×{" "}
+                        ${Number(customer.installmentAmount).toFixed(2)} ×{" "}
                         {customer.numberOfInstallments}{" "}
                         {t("customers.installments")}
                       </div>

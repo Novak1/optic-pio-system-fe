@@ -191,7 +191,7 @@ export default function DashboardPage() {
                 <Spinner size="sm" className="mt-2" />
               ) : (
                 <p className="text-3xl font-bold text-gray-900 dark:text-gray-100 mt-2">
-                  ${stats.revenueThisMonth.toFixed(2)}
+                  ${Number(stats.revenueThisMonth).toFixed(2)}
                 </p>
               )}
             </div>
@@ -280,7 +280,7 @@ export default function DashboardPage() {
                 </div>
                 <div className="text-right">
                   <p className="font-semibold text-success-600 dark:text-success-400">
-                    ${payment.amountPaid.toFixed(2)}
+                    ${Number(payment.amountPaid).toFixed(2)}
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
                     {formatDate(payment.createdAt)}
@@ -350,13 +350,13 @@ export default function DashboardPage() {
                       {getMonthName(stat.month)} {stat.year}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-gray-600 dark:text-gray-400 font-semibold">
-                      ${stat.expectedDebt.toFixed(2)}
+                      ${Number(stat.expectedDebt).toFixed(2)}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-success-600 dark:text-success-400 font-semibold">
-                      ${stat.income.toFixed(2)}
+                      ${Number(stat.income).toFixed(2)}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-right text-danger-600 dark:text-danger-400 font-semibold">
-                      ${stat.remainingDebt.toFixed(2)}
+                      ${Number(stat.remainingDebt).toFixed(2)}
                     </td>
                   </tr>
                 ))}

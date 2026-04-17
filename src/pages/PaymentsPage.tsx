@@ -180,7 +180,7 @@ export default function PaymentsPage() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="text-sm font-semibold text-success-600 dark:text-success-400">
-                        ${payment.amountPaid.toFixed(2)}
+                        ${Number(payment.amountPaid).toFixed(2)}
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
@@ -245,7 +245,7 @@ export default function PaymentsPage() {
             <div className="text-center">
               <p className="text-sm text-gray-500 dark:text-gray-400">{t("payments.totalAmountCollected")} (Page)</p>
               <p className="text-3xl font-bold text-success-600 dark:text-success-400 mt-2">
-                ${payments.reduce((sum, p) => sum + p.amountPaid, 0).toFixed(2)}
+                ${Number(payments.reduce((sum, p) => sum + Number(p.amountPaid), 0)).toFixed(2)}
               </p>
             </div>
           </Card>
@@ -253,7 +253,7 @@ export default function PaymentsPage() {
             <div className="text-center">
               <p className="text-sm text-gray-500 dark:text-gray-400">{t("payments.averagePayment")} (Page)</p>
               <p className="text-3xl font-bold text-gray-900 dark:text-white mt-2">
-                ${(payments.reduce((sum, p) => sum + p.amountPaid, 0) / payments.length).toFixed(2)}
+                ${(Number(payments.reduce((sum, p) => sum + Number(p.amountPaid), 0)) / payments.length).toFixed(2)}
               </p>
             </div>
           </Card>
